@@ -1,0 +1,125 @@
+Launch Command: "/opt/bitnami/java/bin/java" "-cp" "/opt/bitnami/spark/conf/:/opt/bitnami/spark/jars/slf4j-api-2.0.16.jar:/opt/bitnami/spark/jars/*" "-Xmx1024M" "-Dspark.submit.pyFiles=" "-Dspark.app.name=appli_spark-1.0-SNAPSHOT-jar-with-dependencies.jar" "-Dspark.jars=file:/opt/bitnami/spark/appli_spark-1.0-SNAPSHOT-jar-with-dependencies.jar" "-Dspark.master=spark://spark-master:7077" "-Dspark.submit.deployMode=cluster" "-Dspark.driver.extraJavaOptions=--add-exports java.base/sun.nio.ch=ALL-UNNAMED" "-Dspark.driver.supervise=false" "-Dspark.rpc.askTimeout=10s" "-Dspark.app.submitTime=1749394609826" "--add-exports" "java.base/sun.nio.ch=ALL-UNNAMED" "org.apache.spark.deploy.worker.DriverWrapper" "spark://Worker@172.20.0.3:41451" "/opt/bitnami/spark/work/driver-20250608145650-0003/appli_spark-1.0-SNAPSHOT-jar-with-dependencies.jar" "net.soufiane.Main3"
+========================================
+
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+25/06/08 14:56:58 INFO SecurityManager: Changing view acls to: spark
+25/06/08 14:56:58 INFO SecurityManager: Changing modify acls to: spark
+25/06/08 14:56:58 INFO SecurityManager: Changing view acls groups to: spark
+25/06/08 14:56:58 INFO SecurityManager: Changing modify acls groups to: spark
+25/06/08 14:56:58 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY; RPC SSL disabled
+25/06/08 14:56:58 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/06/08 14:56:59 INFO Utils: Successfully started service 'Driver' on port 41501.
+25/06/08 14:56:59 INFO DriverWrapper: Driver address: 172.20.0.3:41501
+25/06/08 14:56:59 INFO WorkerWatcher: Connecting to worker spark://Worker@172.20.0.3:41451
+25/06/08 14:56:59 INFO WorkerWatcher: Successfully connected to spark://Worker@172.20.0.3:41451
+25/06/08 14:56:59 INFO TransportClientFactory: Successfully created connection to /172.20.0.3:41451 after 33 ms (0 ms spent in bootstraps)
+25/06/08 14:56:59 INFO SparkContext: Running Spark version 4.0.0
+25/06/08 14:56:59 INFO SparkContext: OS info Linux, 6.6.87.1-microsoft-standard-WSL2, amd64
+25/06/08 14:56:59 INFO SparkContext: Java version 17.0.15
+25/06/08 14:56:59 INFO ResourceUtils: ==============================================================
+25/06/08 14:56:59 INFO ResourceUtils: No custom resources configured for spark.driver.
+25/06/08 14:56:59 INFO ResourceUtils: ==============================================================
+25/06/08 14:56:59 INFO SparkContext: Submitted application: Ventes
+25/06/08 14:56:59 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+25/06/08 14:56:59 INFO ResourceProfile: Limiting resource is cpu
+25/06/08 14:56:59 INFO ResourceProfileManager: Added ResourceProfile id: 0
+25/06/08 14:56:59 INFO SecurityManager: Changing view acls to: spark
+25/06/08 14:56:59 INFO SecurityManager: Changing modify acls to: spark
+25/06/08 14:56:59 INFO SecurityManager: Changing view acls groups to: spark
+25/06/08 14:56:59 INFO SecurityManager: Changing modify acls groups to: spark
+25/06/08 14:56:59 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY; RPC SSL disabled
+25/06/08 14:56:59 INFO Utils: Successfully started service 'sparkDriver' on port 35287.
+25/06/08 14:56:59 INFO SparkEnv: Registering MapOutputTracker
+25/06/08 14:56:59 INFO SparkEnv: Registering BlockManagerMaster
+25/06/08 14:56:59 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+25/06/08 14:56:59 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+25/06/08 14:56:59 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+25/06/08 14:56:59 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-952711b0-4353-40ef-8cb7-467e15ab0c1a
+25/06/08 14:56:59 INFO SparkEnv: Registering OutputCommitCoordinator
+25/06/08 14:56:59 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+25/06/08 14:56:59 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+25/06/08 14:56:59 INFO SparkContext: Added JAR file:/opt/bitnami/spark/appli_spark-1.0-SNAPSHOT-jar-with-dependencies.jar at spark://a7e13a8e6410:35287/jars/appli_spark-1.0-SNAPSHOT-jar-with-dependencies.jar with timestamp 1749394619538
+25/06/08 14:57:00 INFO SecurityManager: Changing view acls to: spark
+25/06/08 14:57:00 INFO SecurityManager: Changing modify acls to: spark
+25/06/08 14:57:00 INFO SecurityManager: Changing view acls groups to: spark
+25/06/08 14:57:00 INFO SecurityManager: Changing modify acls groups to: spark
+25/06/08 14:57:00 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY; RPC SSL disabled
+25/06/08 14:57:00 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+25/06/08 14:57:00 INFO TransportClientFactory: Successfully created connection to spark-master/172.20.0.2:7077 after 3 ms (0 ms spent in bootstraps)
+25/06/08 14:57:00 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20250608145700-0003
+25/06/08 14:57:00 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20250608145700-0003/0 on worker-20250608142650-172.20.0.5-44129 (172.20.0.5:44129) with 1 core(s)
+25/06/08 14:57:00 INFO StandaloneSchedulerBackend: Granted executor ID app-20250608145700-0003/0 on hostPort 172.20.0.5:44129 with 1 core(s), 1024.0 MiB RAM
+25/06/08 14:57:00 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20250608145700-0003/1 on worker-20250608142650-172.20.0.4-46459 (172.20.0.4:46459) with 1 core(s)
+25/06/08 14:57:00 INFO StandaloneSchedulerBackend: Granted executor ID app-20250608145700-0003/1 on hostPort 172.20.0.4:46459 with 1 core(s), 1024.0 MiB RAM
+25/06/08 14:57:00 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39467.
+25/06/08 14:57:00 INFO NettyBlockTransferService: Server created on a7e13a8e6410:39467
+25/06/08 14:57:00 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/06/08 14:57:00 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, a7e13a8e6410, 39467, None)
+25/06/08 14:57:00 INFO BlockManagerMasterEndpoint: Registering block manager a7e13a8e6410:39467 with 434.4 MiB RAM, BlockManagerId(driver, a7e13a8e6410, 39467, None)
+25/06/08 14:57:00 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, a7e13a8e6410, 39467, None)
+25/06/08 14:57:00 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, a7e13a8e6410, 39467, None)
+25/06/08 14:57:00 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20250608145700-0003/0 is now RUNNING
+25/06/08 14:57:00 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20250608145700-0003/1 is now RUNNING
+25/06/08 14:57:00 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+25/06/08 14:57:01 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+25/06/08 14:57:01 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 376.0 B, free 434.4 MiB)
+25/06/08 14:57:01 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 36.9 KiB, free 434.4 MiB)
+25/06/08 14:57:01 INFO SparkContext: Created broadcast 0 from textFile at Main3.java:32
+25/06/08 14:57:01 INFO FileInputFormat: Total input files to process : 1
+25/06/08 14:57:01 INFO SparkContext: Starting job: collect at Main3.java:41
+25/06/08 14:57:02 INFO DAGScheduler: Registering RDD 3 (mapToPair at Main3.java:37) as input to shuffle 0
+25/06/08 14:57:02 INFO DAGScheduler: Got job 0 (collect at Main3.java:41) with 2 output partitions
+25/06/08 14:57:02 INFO DAGScheduler: Final stage: ResultStage 1 (collect at Main3.java:41)
+25/06/08 14:57:02 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 0)
+25/06/08 14:57:02 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 0)
+25/06/08 14:57:02 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[3] at mapToPair at Main3.java:37), which has no missing parents
+25/06/08 14:57:02 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 7.6 KiB, free 434.4 MiB)
+25/06/08 14:57:02 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 4.1 KiB, free 434.4 MiB)
+25/06/08 14:57:02 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1676
+25/06/08 14:57:02 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[3] at mapToPair at Main3.java:37) (first 15 tasks are for partitions Vector(0, 1))
+25/06/08 14:57:02 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks resource profile 0
+25/06/08 14:57:04 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.20.0.5:59824) with ID 0, ResourceProfileId 0
+25/06/08 14:57:04 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.20.0.4:38510) with ID 1, ResourceProfileId 0
+25/06/08 14:57:04 INFO BlockManagerMasterEndpoint: Registering block manager 172.20.0.5:38893 with 434.4 MiB RAM, BlockManagerId(0, 172.20.0.5, 38893, None)
+25/06/08 14:57:04 INFO BlockManagerMasterEndpoint: Registering block manager 172.20.0.4:45843 with 434.4 MiB RAM, BlockManagerId(1, 172.20.0.4, 45843, None)
+25/06/08 14:57:27 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (172.20.0.4,executor 1, partition 0, PROCESS_LOCAL, 9883 bytes) 
+25/06/08 14:57:27 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (172.20.0.5,executor 0, partition 1, PROCESS_LOCAL, 9883 bytes) 
+25/06/08 14:57:28 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 1019 ms on 172.20.0.5 (executor 0) (1/2)
+25/06/08 14:57:28 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1081 ms on 172.20.0.4 (executor 1) (2/2)
+25/06/08 14:57:28 INFO TaskSchedulerImpl: Removed TaskSet 0.0 whose tasks have all completed, from pool 
+25/06/08 14:57:28 INFO DAGScheduler: ShuffleMapStage 0 (mapToPair at Main3.java:37) finished in 26702 ms
+25/06/08 14:57:28 INFO DAGScheduler: looking for newly runnable stages
+25/06/08 14:57:28 INFO DAGScheduler: running: HashSet()
+25/06/08 14:57:28 INFO DAGScheduler: waiting: HashSet(ResultStage 1)
+25/06/08 14:57:28 INFO DAGScheduler: failed: HashSet()
+25/06/08 14:57:28 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[5] at map at Main3.java:39), which has no missing parents
+25/06/08 14:57:28 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 6.2 KiB, free 434.3 MiB)
+25/06/08 14:57:28 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 3.3 KiB, free 434.3 MiB)
+25/06/08 14:57:28 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1676
+25/06/08 14:57:28 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 1 (MapPartitionsRDD[5] at map at Main3.java:39) (first 15 tasks are for partitions Vector(0, 1))
+25/06/08 14:57:28 INFO TaskSchedulerImpl: Adding task set 1.0 with 2 tasks resource profile 0
+25/06/08 14:57:28 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2) (172.20.0.4,executor 1, partition 0, NODE_LOCAL, 9662 bytes) 
+25/06/08 14:57:28 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 3) (172.20.0.5,executor 0, partition 1, NODE_LOCAL, 9662 bytes) 
+25/06/08 14:57:28 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 172.20.0.4:38510
+25/06/08 14:57:28 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 172.20.0.5:59824
+25/06/08 14:57:29 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 254 ms on 172.20.0.4 (executor 1) (1/2)
+25/06/08 14:57:29 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 3) in 251 ms on 172.20.0.5 (executor 0) (2/2)
+25/06/08 14:57:29 INFO TaskSchedulerImpl: Removed TaskSet 1.0 whose tasks have all completed, from pool 
+25/06/08 14:57:29 INFO DAGScheduler: ResultStage 1 (collect at Main3.java:41) finished in 279 ms
+25/06/08 14:57:29 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+25/06/08 14:57:29 INFO TaskSchedulerImpl: Canceling stage 1
+25/06/08 14:57:29 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+25/06/08 14:57:29 INFO DAGScheduler: Job 0 finished: collect at Main3.java:41, took 27162.140341 ms
+25/06/08 14:57:29 INFO SparkContext: SparkContext is stopping with exitCode 0 from close at Main3.java:43.
+25/06/08 14:57:29 INFO SparkUI: Stopped Spark web UI at http://a7e13a8e6410:4040
+25/06/08 14:57:29 INFO StandaloneSchedulerBackend: Shutting down all executors
+25/06/08 14:57:29 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Asking each executor to shut down
+25/06/08 14:57:29 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+25/06/08 14:57:29 INFO MemoryStore: MemoryStore cleared
+25/06/08 14:57:29 INFO BlockManager: BlockManager stopped
+25/06/08 14:57:29 INFO BlockManagerMaster: BlockManagerMaster stopped
+25/06/08 14:57:29 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+25/06/08 14:57:29 INFO SparkContext: Successfully stopped SparkContext
+25/06/08 14:57:29 INFO ShutdownHookManager: Shutdown hook called
+25/06/08 14:57:29 INFO ShutdownHookManager: Deleting directory /tmp/spark-bfc27d62-514a-4646-99bb-118d89e3139e
+25/06/08 14:57:29 INFO ShutdownHookManager: Deleting directory /tmp/spark-1c17d27d-a776-49ff-ba1c-ba1098a4a5ed

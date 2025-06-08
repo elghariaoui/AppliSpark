@@ -1,0 +1,1 @@
+/opt/bitnami/spark/ventes.txt

@@ -1,0 +1,97 @@
+Spark Executor Command: "/opt/bitnami/java/bin/java" "-cp" "/opt/bitnami/spark/conf/:/opt/bitnami/spark/jars/slf4j-api-2.0.16.jar:/opt/bitnami/spark/jars/*" "-Xmx1024M" "-Dspark.rpc.askTimeout=10s" "-Dspark.driver.port=33445" "-Djava.net.preferIPv6Addresses=false" "-XX:+IgnoreUnrecognizedVMOptions" "--add-modules=jdk.incubator.vector" "--add-opens=java.base/java.lang=ALL-UNNAMED" "--add-opens=java.base/java.lang.invoke=ALL-UNNAMED" "--add-opens=java.base/java.lang.reflect=ALL-UNNAMED" "--add-opens=java.base/java.io=ALL-UNNAMED" "--add-opens=java.base/java.net=ALL-UNNAMED" "--add-opens=java.base/java.nio=ALL-UNNAMED" "--add-opens=java.base/java.util=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED" "--add-opens=java.base/jdk.internal.ref=ALL-UNNAMED" "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED" "--add-opens=java.base/sun.nio.cs=ALL-UNNAMED" "--add-opens=java.base/sun.security.action=ALL-UNNAMED" "--add-opens=java.base/sun.util.calendar=ALL-UNNAMED" "--add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED" "-Djdk.reflect.useDirectMethodHandle=false" "-Dio.netty.tryReflectionSetAccessible=true" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@c1215c13417c:33445" "--executor-id" "0" "--hostname" "172.21.0.7" "--cores" "1" "--app-id" "app-20250608223718-0002" "--worker-url" "spark://Worker@172.21.0.7:36157" "--resourceProfileId" "0"
+========================================
+
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+25/06/08 22:37:20 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 287@8fcd0f5f4d6e
+25/06/08 22:37:20 INFO SignalUtils: Registering signal handler for TERM
+25/06/08 22:37:20 INFO SignalUtils: Registering signal handler for HUP
+25/06/08 22:37:20 INFO SignalUtils: Registering signal handler for INT
+25/06/08 22:37:20 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/06/08 22:37:20 INFO SecurityManager: Changing view acls to: spark
+25/06/08 22:37:20 INFO SecurityManager: Changing modify acls to: spark
+25/06/08 22:37:20 INFO SecurityManager: Changing view acls groups to: spark
+25/06/08 22:37:20 INFO SecurityManager: Changing modify acls groups to: spark
+25/06/08 22:37:20 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY; RPC SSL disabled
+25/06/08 22:37:21 INFO TransportClientFactory: Successfully created connection to c1215c13417c/172.21.0.6:33445 after 92 ms (0 ms spent in bootstraps)
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+25/06/08 22:37:21 INFO SecurityManager: Changing view acls to: spark
+25/06/08 22:37:21 INFO SecurityManager: Changing modify acls to: spark
+25/06/08 22:37:21 INFO SecurityManager: Changing view acls groups to: spark
+25/06/08 22:37:21 INFO SecurityManager: Changing modify acls groups to: spark
+25/06/08 22:37:21 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY; RPC SSL disabled
+25/06/08 22:37:21 INFO TransportClientFactory: Successfully created connection to c1215c13417c/172.21.0.6:33445 after 5 ms (0 ms spent in bootstraps)
+25/06/08 22:37:21 INFO DiskBlockManager: Created local directory at /tmp/spark-bd6191ee-f308-49d3-9fdf-785ffdf5ba66/executor-a9f01012-82fc-46d6-b69c-7a8a42c12d30/blockmgr-bcb64c8b-11db-467c-bc72-7e334726a9bc
+25/06/08 22:37:21 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@c1215c13417c:33445
+25/06/08 22:37:21 INFO SecurityManager: Changing view acls to: spark
+25/06/08 22:37:21 INFO SecurityManager: Changing modify acls to: spark
+25/06/08 22:37:21 INFO WorkerWatcher: Connecting to worker spark://Worker@172.21.0.7:36157
+25/06/08 22:37:21 INFO SecurityManager: Changing view acls groups to: spark
+25/06/08 22:37:21 INFO SecurityManager: Changing modify acls groups to: spark
+25/06/08 22:37:21 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY; RPC SSL disabled
+25/06/08 22:37:21 INFO TransportClientFactory: Successfully created connection to /172.21.0.7:36157 after 2 ms (0 ms spent in bootstraps)
+25/06/08 22:37:21 INFO WorkerWatcher: Successfully connected to spark://Worker@172.21.0.7:36157
+25/06/08 22:37:21 INFO ResourceUtils: ==============================================================
+25/06/08 22:37:21 INFO ResourceUtils: No custom resources configured for spark.executor.
+25/06/08 22:37:21 INFO ResourceUtils: ==============================================================
+25/06/08 22:37:21 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+25/06/08 22:37:21 INFO Executor: Starting executor ID 0 on host 172.21.0.7
+25/06/08 22:37:21 INFO Executor: OS info Linux, 6.6.87.1-microsoft-standard-WSL2, amd64
+25/06/08 22:37:21 INFO Executor: Java version 17.0.15
+25/06/08 22:37:22 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 46517.
+25/06/08 22:37:22 INFO NettyBlockTransferService: Server created on 172.21.0.7:46517
+25/06/08 22:37:22 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/06/08 22:37:22 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(0, 172.21.0.7, 46517, None)
+25/06/08 22:37:22 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(0, 172.21.0.7, 46517, None)
+25/06/08 22:37:22 INFO BlockManager: Initialized BlockManager: BlockManagerId(0, 172.21.0.7, 46517, None)
+25/06/08 22:37:22 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+25/06/08 22:37:22 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@7a4e717b for default.
+25/06/08 22:37:22 INFO Executor: Fetching hdfs://namenode:8020/app/appli_spark-1.0-SNAPSHOT-jar-with-dependencies.jar with timestamp 1749422237517
+25/06/08 22:37:22 INFO Utils: Fetching hdfs://namenode:8020/app/appli_spark-1.0-SNAPSHOT-jar-with-dependencies.jar to /tmp/spark-bd6191ee-f308-49d3-9fdf-785ffdf5ba66/executor-a9f01012-82fc-46d6-b69c-7a8a42c12d30/spark-b3a91696-d6b0-4d8d-87ec-86506cd7ddbd/fetchFileTemp2659636435946658316.tmp
+25/06/08 22:37:29 INFO Utils: Copying /tmp/spark-bd6191ee-f308-49d3-9fdf-785ffdf5ba66/executor-a9f01012-82fc-46d6-b69c-7a8a42c12d30/spark-b3a91696-d6b0-4d8d-87ec-86506cd7ddbd/-10867799121749422237517_cache to /opt/bitnami/spark/work/app-20250608223718-0002/0/./appli_spark-1.0-SNAPSHOT-jar-with-dependencies.jar
+25/06/08 22:37:44 INFO Executor: Adding file:/opt/bitnami/spark/work/app-20250608223718-0002/0/./appli_spark-1.0-SNAPSHOT-jar-with-dependencies.jar to class loader default
+25/06/08 22:37:44 INFO SecurityManager: Changing view acls to: spark
+25/06/08 22:37:44 INFO SecurityManager: Changing modify acls to: spark
+25/06/08 22:37:44 INFO SecurityManager: Changing view acls groups to: spark
+25/06/08 22:37:44 INFO SecurityManager: Changing modify acls groups to: spark
+25/06/08 22:37:44 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY; RPC SSL disabled
+25/06/08 22:37:45 INFO CoarseGrainedExecutorBackend: Got assigned task 1
+25/06/08 22:37:45 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+25/06/08 22:37:45 INFO TorrentBroadcast: Started reading broadcast variable 1 with 1 pieces (estimated total size 4.0 MiB)
+25/06/08 22:37:45 INFO TransportClientFactory: Successfully created connection to c1215c13417c/172.21.0.6:40665 after 4 ms (0 ms spent in bootstraps)
+25/06/08 22:37:45 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+25/06/08 22:37:45 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 4.1 KiB, free 434.4 MiB)
+25/06/08 22:37:45 INFO TorrentBroadcast: Reading broadcast variable 1 took 193 ms
+25/06/08 22:37:45 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 7.6 KiB, free 434.4 MiB)
+25/06/08 22:37:45 INFO HadoopRDD: Task (TID 1) input split: hdfs://namenode:8020/app/ventes.txt:426+427
+25/06/08 22:37:45 INFO TorrentBroadcast: Started reading broadcast variable 0 with 1 pieces (estimated total size 4.0 MiB)
+25/06/08 22:37:45 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 36.9 KiB, free 434.4 MiB)
+25/06/08 22:37:45 INFO TorrentBroadcast: Reading broadcast variable 0 took 21 ms
+25/06/08 22:37:46 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 398.6 KiB, free 434.0 MiB)
+25/06/08 22:37:46 INFO SecurityManager: Changing view acls to: spark
+25/06/08 22:37:46 INFO SecurityManager: Changing modify acls to: spark
+25/06/08 22:37:46 INFO SecurityManager: Changing view acls groups to: spark
+25/06/08 22:37:46 INFO SecurityManager: Changing modify acls groups to: spark
+25/06/08 22:37:46 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY; RPC SSL disabled
+25/06/08 22:37:46 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 1444 bytes result sent to driver
+25/06/08 22:37:46 INFO CoarseGrainedExecutorBackend: Got assigned task 3
+25/06/08 22:37:46 INFO Executor: Running task 1.0 in stage 1.0 (TID 3)
+25/06/08 22:37:46 INFO MapOutputTrackerWorker: Updating epoch to 1 and clearing cache
+25/06/08 22:37:46 INFO TorrentBroadcast: Started reading broadcast variable 2 with 1 pieces (estimated total size 4.0 MiB)
+25/06/08 22:37:46 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 3.3 KiB, free 434.0 MiB)
+25/06/08 22:37:46 INFO TorrentBroadcast: Reading broadcast variable 2 took 20 ms
+25/06/08 22:37:46 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 6.2 KiB, free 434.0 MiB)
+25/06/08 22:37:46 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+25/06/08 22:37:46 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@c1215c13417c:33445)
+25/06/08 22:37:46 INFO MapOutputTrackerWorker: Got the map output locations
+25/06/08 22:37:46 INFO ShuffleBlockFetcherIterator: Getting 2 (284.0 B) non-empty blocks including 1 (142.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 1 (142.0 B) remote blocks
+25/06/08 22:37:46 INFO TransportClientFactory: Successfully created connection to /172.21.0.5:44289 after 1 ms (0 ms spent in bootstraps)
+25/06/08 22:37:46 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 55 ms
+25/06/08 22:37:46 INFO Executor: Finished task 1.0 in stage 1.0 (TID 3). 1878 bytes result sent to driver
+25/06/08 22:37:46 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+25/06/08 22:37:46 INFO MemoryStore: MemoryStore cleared
+25/06/08 22:37:46 INFO BlockManager: BlockManager stopped
+25/06/08 22:37:47 INFO ShutdownHookManager: Shutdown hook called
+25/06/08 22:37:47 INFO ShutdownHookManager: Deleting directory /tmp/spark-bd6191ee-f308-49d3-9fdf-785ffdf5ba66/executor-a9f01012-82fc-46d6-b69c-7a8a42c12d30/spark-b3a91696-d6b0-4d8d-87ec-86506cd7ddbd
+25/06/08 22:37:47 ERROR CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+d6191ee-f308-49d3-9fdf-785ffdf5ba66/executor-a9f01012-82fc-46d6-b69c-7a8a42c12d30/spark-b3a91696-d6b0-4d8d-87ec-86506cd7ddbd

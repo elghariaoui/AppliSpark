@@ -1,1 +1,2 @@
-/opt/bitnami/spark/ventes.txt
+hdfs://namenode:8020/app/ventes.txt
+#/opt/bitnami/spark/ventes.txt
